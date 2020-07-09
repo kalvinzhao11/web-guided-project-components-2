@@ -1,6 +1,6 @@
 // Imports at the top of the file!
 // We never nest imports inside blocks of code!
-
+import axios from 'axios'
 
 // 👉 TASK 1- Test out the endpoint `https://dog.ceo/api/breeds/image/random`
 //    * With HTTPie (command-line tool)
@@ -52,7 +52,7 @@ function dogCardMaker({ imageURL, breed }) {
 // 👉 TASK 4- Bring the Axios library into the project using one of two methods:
 //    * Traditional way: put another script tag inside index.html (`https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js`)
 //    * Proyects with npm: install it with npm and import it into this file
-
+console.log(axios)
 
 // 👉 TASK 5- Fetch dogs from `https://dog.ceo/api/breed/{breed}/images/random/{number}`
 //    * ON SUCCESS: use the data to create dogCards and append them to the entry point
