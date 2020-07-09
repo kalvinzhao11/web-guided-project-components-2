@@ -5,7 +5,7 @@
 // 👉 TASK 1- Test out the endpoint `https://dog.ceo/api/breeds/image/random`
 //    * With HTTPie (command-line tool)
 //    * With Postman (tool with GUI)
-//    * With Chrome
+//    * With Chrome :)
 
 
 // 👉 TASK 2- Select the "entry point", the element
