@@ -94,6 +94,8 @@ axios.get(austDog)
       const card = dogCardMaker({ imageURL, breed })
       entryPoint.appendChild(card)
     })
+    // anything you need with the data from THE API needs to be handled her
+    // INSIDE THE HAPPY PATH
   })
   .catch(function (error) {
     debugger
