@@ -55,18 +55,22 @@ function dogCardMaker({ imageURL, breed }) {
 // console.log(axios)
 
 const randomDogURL = 'https://dog.ceo/api/breeds/image/random'
+let responseData = null
 
 // this takes an eternity AND JS CAN'T WAIT
 axios.get(randomDogURL)
   .then(function (something) {
     debugger
     console.log(something.data)
+    responseData = something.data
   })
   .catch(function (error) {
     debugger
     console.log(error)
   })
 
+
+console.log(responseData)
 console.log('lady gaga')
 
 // 👉 TASK 5- Fetch dogs from `https://dog.ceo/api/breed/{breed}/images/random/{number}`
