@@ -85,8 +85,13 @@ console.log('lady gaga')
 
 // 👉 TASK 6- Wrap the fetching operation inside a function `getDogs`
 // that takes a breed and a count (of dogs)
-getDoggies('australian', 3)
-getDoggies('mastiff', 3)
+// getDoggies('australian', 3)
+// getDoggies('mastiff', 3)
+
+document.querySelector('button').addEventListener('click', () => {
+  getDoggies('australian', 3)
+  getDoggies('mastiff', 3)
+})
 
 function getDoggies(breed, number) {
 
