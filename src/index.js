@@ -21,7 +21,7 @@ const card = dogCardMaker({
   imageURL: 'https://sasscer.files.wordpress.com/2014/05/image33.jpg'
 })
 
-entryPoint.appendChild(card)
+// entryPoint.appendChild(card)
 
 function dogCardMaker({ imageURL, breed }) {
   // const imageURL = stuff.imageURL
@@ -60,20 +60,20 @@ let responseData = null
 // this takes an eternity AND JS CAN'T WAIT
 axios.get(randomDogURL)
   .then(function (something) {
-    debugger
+    // debugger
     console.log(something.data)
-    responseData = something.data // NOT GONNA WORK!!!!!!!!!!!!!!!!!!!!!!
+    responseData = something.data // NOT GONNA WORK!!!!!!!
 
     // WHATEVER WE WANT TO DO WITH THE RESPONSE NEEDS TO BE DONE RIGHT HERE
     // DOM manipulation etc
   })
   .catch(function (error) {
-    debugger
+    // debugger
     console.log(error)
   })
 
 
-console.log(responseData)
+console.log(responseData) // NOT GONNA WORK! IT'S STILL null !!!!!!
 console.log('lady gaga')
 
 // 👉 TASK 5- Fetch dogs from `https://dog.ceo/api/breed/australian/images/random/3`
@@ -81,7 +81,19 @@ console.log('lady gaga')
 //    * ON FAILURE: log the error to the console
 //    * IN ANY CASE: log "done" to the console
 //    (instructor will demo fetching a random dog from `https://dog.ceo/api/breeds/image/random`)
+const austDog = 'https://dog.ceo/api/breed/australian/images/random/3'
+axios.get(austDog)
+  .then(function (value) {
+    const imageURLs = value.data.message
+    const breed = 'Australian'
 
+    // we can loop over imageURLs
+    // at each iteration we instantiate a Dog Card
+    // and append it to the entry point
+  })
+  .catch(function (error) {
+    debugger
+  })
 
 // 👉 TASK 6- Wrap the fetching operation inside a function `getDogs`
 // that takes a breed and a count (of dogs)
