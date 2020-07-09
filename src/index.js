@@ -81,29 +81,32 @@ console.log('lady gaga')
 //    * ON FAILURE: log the error to the console
 //    * IN ANY CASE: log "done" to the console
 //    (instructor will demo fetching a random dog from `https://dog.ceo/api/breeds/image/random`)
-const austDog = 'https://dog.ceo/api/breed/australian/images/random/3'
-axios.get(austDog)
-  .then(function (value) {
-    const imageURLs = value.data.message
-    const breed = 'Australian'
 
-    // we can loop over imageURLs
-    // at each iteration we instantiate a Dog Card
-    // and append it to the entry point
-    imageURLs.forEach(imageURL => {
-      const card = dogCardMaker({ imageURL, breed })
-      entryPoint.appendChild(card)
-    })
-    // anything you need with the data from THE API needs to be handled her
-    // INSIDE THE HAPPY PATH
-  })
-  .catch(function (error) {
-    debugger
-  })
 
 // 👉 TASK 6- Wrap the fetching operation inside a function `getDogs`
 // that takes a breed and a count (of dogs)
+function getDoggies(breed, number) {
 
+  const austDog = `https://dog.ceo/api/${breed}/australian/images/random/${number}`
+  axios.get(austDog)
+    .then(function (value) {
+      const imageURLs = value.data.message
+      const breed = 'Australian'
+
+      // we can loop over imageURLs
+      // at each iteration we instantiate a Dog Card
+      // and append it to the entry point
+      imageURLs.forEach(imageURL => {
+        const card = dogCardMaker({ imageURL, breed })
+        entryPoint.appendChild(card)
+      })
+      // anything you need with the data from THE API needs to be handled her
+      // INSIDE THE HAPPY PATH
+    })
+    .catch(function (error) {
+      debugger
+    })
+}
 
 // 👉 TASK 7- Put a button in index.html to 'get dogs' and add a click
 // event listener that executes `getDogs`
