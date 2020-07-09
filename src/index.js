@@ -2,6 +2,20 @@
 // We never nest imports inside blocks of code!
 import axios from 'axios'
 
+/*
+
+{
+    "message": [
+        "https://images.dog.ceo/breeds/australian-shepherd/leroy.jpg",
+        "https://images.dog.ceo/breeds/australian-shepherd/pepper2.jpg",
+        "https://images.dog.ceo/breeds/australian-shepherd/sadie.jpg"
+    ],
+    "status": "success"
+}
+
+*/
+
+
 // 👉 TASK 1- Test out the endpoint `https://dog.ceo/api/breeds/image/random`
 //    * With HTTPie (command-line tool)
 //    * With Postman (tool with GUI)
