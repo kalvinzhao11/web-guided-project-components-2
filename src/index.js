@@ -52,19 +52,21 @@ function dogCardMaker({ imageURL, breed }) {
 // 👉 TASK 4- Bring the Axios library into the project using one of two methods:
 //    * Traditional way: put another script tag inside index.html (`https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js`)
 //    * Proyects with npm: install it with npm and import it into this file
-console.log(axios)
+// console.log(axios)
 
-const randomDogURL = 'https://dog.ceo/api/breeds/image/random'
+const randomDogURL = 'https://dog.ceo/api/breeds/image/ladygaga'
 
 // this takes an eternity AND JS CAN'T WAIT
 axios.get(randomDogURL)
   .then(function (something) {
+    debugger
     console.log(something)
   })
   .catch(function (error) {
+    debugger
     console.log(error)
   })
-
+debugger
 console.log('lady gaga')
 
 // 👉 TASK 5- Fetch dogs from `https://dog.ceo/api/breed/{breed}/images/random/{number}`
