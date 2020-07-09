@@ -60,7 +60,7 @@ const randomDogURL = 'https://dog.ceo/api/breeds/image/random'
 axios.get(randomDogURL)
   .then(function (something) {
     debugger
-    console.log(something)
+    console.log(something.data)
   })
   .catch(function (error) {
     debugger
