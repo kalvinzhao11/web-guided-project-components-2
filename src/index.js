@@ -62,7 +62,10 @@ axios.get(randomDogURL)
   .then(function (something) {
     debugger
     console.log(something.data)
-    responseData = something.data
+    responseData = something.data // NOT GONNA WORK!!!!!!!!!!!!!!!!!!!!!!
+
+    // WHATEVER WE WANT TO DO WITH THE RESPONSE NEEDS TO BE DONE RIGHT HERE
+    // DOM manipulation etc
   })
   .catch(function (error) {
     debugger
