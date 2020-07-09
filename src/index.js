@@ -54,6 +54,12 @@ function dogCardMaker({ imageURL, breed }) {
 //    * Proyects with npm: install it with npm and import it into this file
 console.log(axios)
 
+const randomDogURL = 'https://dog.ceo/api/breeds/image/random'
+
+axios.get(randomDogURL).then().catch() // this takes an eternity AND JS CAN'T WAIT
+
+console.log('lady gaga')
+
 // 👉 TASK 5- Fetch dogs from `https://dog.ceo/api/breed/{breed}/images/random/{number}`
 //    * ON SUCCESS: use the data to create dogCards and append them to the entry point
 //    * ON FAILURE: log the error to the console
