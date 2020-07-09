@@ -91,8 +91,8 @@ axios.get(austDog)
     // at each iteration we instantiate a Dog Card
     // and append it to the entry point
     imageURLs.forEach(imageURL => {
-      const card = dogCardMaker({ imageURL: imageURL, breed: breed })
-      debugger
+      const card = dogCardMaker({ imageURL, breed })
+      entryPoint.appendChild(card)
     })
   })
   .catch(function (error) {
