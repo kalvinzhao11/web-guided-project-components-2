@@ -85,13 +85,15 @@ console.log('lady gaga')
 
 // 👉 TASK 6- Wrap the fetching operation inside a function `getDogs`
 // that takes a breed and a count (of dogs)
+getDoggies('australian', 3)
+getDoggies('mastiff', 3)
+
 function getDoggies(breed, number) {
 
-  const austDog = `https://dog.ceo/api/${breed}/australian/images/random/${number}`
+  const austDog = `https://dog.ceo/api/breed/${breed}/images/random/${number}`
   axios.get(austDog)
     .then(function (value) {
       const imageURLs = value.data.message
-      const breed = 'Australian'
 
       // we can loop over imageURLs
       // at each iteration we instantiate a Dog Card
