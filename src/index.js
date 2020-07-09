@@ -56,7 +56,14 @@ console.log(axios)
 
 const randomDogURL = 'https://dog.ceo/api/breeds/image/random'
 
-axios.get(randomDogURL).then().catch() // this takes an eternity AND JS CAN'T WAIT
+// this takes an eternity AND JS CAN'T WAIT
+axios.get(randomDogURL)
+  .then(function (something) {
+    console.log(something)
+  })
+  .catch(function (error) {
+    console.log(error)
+  })
 
 console.log('lady gaga')
 
