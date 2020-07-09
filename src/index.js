@@ -61,7 +61,7 @@ let responseData = null
 axios.get(randomDogURL)
   .then(function (something) {
     // debugger
-    console.log(something.data)
+    // console.log(something.data)
     responseData = something.data // NOT GONNA WORK!!!!!!!
 
     // WHATEVER WE WANT TO DO WITH THE RESPONSE NEEDS TO BE DONE RIGHT HERE
@@ -90,6 +90,10 @@ axios.get(austDog)
     // we can loop over imageURLs
     // at each iteration we instantiate a Dog Card
     // and append it to the entry point
+    imageURLs.forEach(imageURL => {
+      const card = dogCardMaker({ imageURL: imageURL, breed: breed })
+      debugger
+    })
   })
   .catch(function (error) {
     debugger
