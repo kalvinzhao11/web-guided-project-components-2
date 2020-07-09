@@ -54,7 +54,7 @@ function dogCardMaker({ imageURL, breed }) {
 //    * Proyects with npm: install it with npm and import it into this file
 // console.log(axios)
 
-const randomDogURL = 'https://dog.ceo/api/breeds/image/ladygaga'
+const randomDogURL = 'https://dog.ceo/api/breeds/image/random'
 
 // this takes an eternity AND JS CAN'T WAIT
 axios.get(randomDogURL)
@@ -66,7 +66,7 @@ axios.get(randomDogURL)
     debugger
     console.log(error)
   })
-debugger
+
 console.log('lady gaga')
 
 // 👉 TASK 5- Fetch dogs from `https://dog.ceo/api/breed/{breed}/images/random/{number}`
