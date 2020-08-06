@@ -90,16 +90,26 @@ function dogCardMaker({ imageURL, breed }) {
 
 // test the enpoint first
 axios.get('https://dog.ceo/api/breed/mastiff/images/random/5')
+// the response body is put by Axios into a 'data' property of the resolved thing
   .then(response => { // in the case of axios, the future data is an object with a 'data' prop (among others)
+  // the data we want is available here, not outsitde of this callback
+  // dom surgery that uses the resolved data needs to go here
+  const arrayOfImageURLs = response.data.message
+  arrayOfImageURLs.forEach((imageURL) => {
+    const card = dogCardMaker({imageURL: imageURL, breed: 'mastiff'})
+    entryPoint.appendChild(card)
+  });
   })
-  .catch(errror =>{ //404 will fall here with axios
-    debugger
+  .catch(error =>{ //404 will fall here with axios
   })
-
+// the data is not available here
 
 // 👉 (OPTIONAL) TASK 6- Wrap the fetching operation inside a function `getDogs`
 // that takes a breed and a count (of dogs)
 
+// getDogs = (breed, count) =>{
+
+// }
 
 // 👉 (OPTIONAL) TASK 7- Put a button in index.html to 'get dogs' and add a click
 // event listener that executes `getDogs`
